@@ -21,7 +21,7 @@ if (starts-with($exist:path, '/edit/')) then
     let $item := substring-after($exist:path, 'edit/')
     return
         <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-            <forward url="/xq/xform-runner.xquery">
+            <forward url="/sg-metadata/xq/xform-runner.xquery">
              <add-parameter name="fid" value="{$item}"/>
             </forward>
         </dispatch>
@@ -31,7 +31,7 @@ if (starts-with($exist:path, '/edit/')) then
  let $item := 'blank_template.xml'
  return
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-            <forward url="/xq/xform-runner.xquery">
+            <forward url="/sg-metadata/xq/xform-runner.xquery">
              <add-parameter name="fid" value="{$item}"/>
             </forward>
    </dispatch>
