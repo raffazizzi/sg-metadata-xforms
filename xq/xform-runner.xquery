@@ -16,7 +16,7 @@ declare option exist:serialize "process-xsl-pi=no";
 
 let $attribute := request:set-attribute("betterform.filter.ignoreResponseBody", "true")
 
-let $base_url := '/metadata/'
+let $base_url := '/exist/apps/sg-metadata/'
 let $load_path := 'posted_data/'
 let $param := request:get-parameter("fid", 0)
 
@@ -103,7 +103,7 @@ let $form :=
 
       <!-- Submission -->
       <xf:submission id="save" method="put" replace="none">
-        <xf:resource value="concat('/metadata/posted_data/', instance('control-codes')/output-filename)"></xf:resource>
+        <xf:resource value="concat('/exist/apps/sg-metadata/posted_data/', instance('control-codes')/output-filename)"></xf:resource>
       </xf:submission>
       
       <xf:action ev:observer="save" ev:event="xforms-submit-done">
@@ -650,7 +650,7 @@ let $form :=
     </body>
 </html>
 
-let $xslt-pi := processing-instruction xml-stylesheet {'type="text/xsl" href="http://50.19.209.106/fs/xforms/xsltforms/xsltforms.xsl" '}
+let $xslt-pi := processing-instruction xml-stylesheet {'type="text/xsl" href="/exist/rest/db/apps/xsltforms/xsltforms.xsl"'}
 let $css-pi := processing-instruction css-conversion {'no'}
 
 return ($xslt-pi,$css-pi,$form)
