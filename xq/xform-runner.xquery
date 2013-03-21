@@ -120,7 +120,7 @@ let $form :=
   <body>
     <div class="container">
       <div class="jumbotron subhead">
-        <h1><a href="/metadata/">Metadata Editor</a></h1>
+        <h1><a href="/exist/apps/sg-metadata/index.xhtml">Metadata Editor</a></h1>
         <p class="lead"><em>for the Shelley-Godwin Archive</em></p>
         <div class="navbar">
           <xf:trigger>
