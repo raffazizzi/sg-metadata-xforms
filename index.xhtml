@@ -28,7 +28,7 @@
           text-align:left;
       }</style>
         <xf:model id="admin">
-            <xf:instance xmlns="http://exist.sourceforge.net/NS/exist" id="file-utils" src="posted_data/"/>
+            <xf:instance xmlns="http://exist.sourceforge.net/NS/exist" id="file-utils" src="/exist/apps/sg-metadata/posted_data/"/>
             <xf:instance xmlns="" id="form-controls">
                 <data>
                     <input-file>blank_template.xml</input-file>
@@ -48,7 +48,7 @@
                     <a href="http://www.shelleygodwinarchive.org/">Shelley-Godwin Archive</a> 
                     project.</p>
                 <p>
-                    <a href="create/" class="btn btn-primary btn-large">Begin New</a>
+                    <a href="/exist/apps/sg-metadata/create/" class="btn btn-primary btn-large">Begin New</a>
                 </p>
             </div>
             <div id="loader" class="span4 offset8">
@@ -67,7 +67,7 @@
                         <xf:label>Load</xf:label>
                         <xf:action ev:event="DOMActivate">
                             <xf:load>
-                                <xf:resource value="concat('edit/', instance('form-controls')/input-file)"/>
+                                <xf:resource value="concat('/exist/apps/sg-metadata/edit/', instance('form-controls')/input-file)"/>
                             </xf:load>
                         </xf:action>
                     </xf:trigger>
